@@ -4,3 +4,7 @@ export function authenticate(username, password) {
   }
   return { user: username, authenticated: true };
 }
+
+export function validateToken(token) {
+  return typeof token === "string" && token.startsWith("Bearer ");
+}
